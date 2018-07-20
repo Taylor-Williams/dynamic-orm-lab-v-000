@@ -23,7 +23,7 @@ class InteractiveRecord
   end
 
   def initialize(attributes = {})
-    attributes.each{ |a, v| self.send("#{a}=", v)
+    attributes.each{ |a, v| self.send("#{a}=", v)}
   end
 
 end
