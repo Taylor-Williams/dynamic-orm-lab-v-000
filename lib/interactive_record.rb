@@ -34,4 +34,8 @@ class InteractiveRecord
     self.class.column_names.reject!{|name| name == "id"}.join(", ")
   end
 
+  def values_for_insert
+    col_names_for_insert
+  end
+
 end
