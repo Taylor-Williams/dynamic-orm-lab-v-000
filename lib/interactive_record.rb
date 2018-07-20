@@ -35,7 +35,7 @@ class InteractiveRecord
   end
 
   def values_for_insert
-    self.class.column_names.reject!{|name| name == "id"}.map{|a| "#{self.send(a)}"}
+    self.class.column_names.reject!{|name| name == "id"}.map{|a| self.send(a).to_s}
   end
 
 end
